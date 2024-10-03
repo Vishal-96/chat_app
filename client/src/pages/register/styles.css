@@ -1,0 +1,28 @@
+.register {
+  display: flex;
+  justify-content: center;
+  background: #93c0c3;
+  align-items: center;
+}
+
+.register .container {
+  max-width: 400px;
+  background: #ffffff;
+  padding: 40px;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.register .submit {
+  background-color: #f5681e;
+  color: white;
+  &:disabled {
+    background-color: lightgray;
+  }
+}
+
+.register .error {
+  color: rgb(241, 85, 85);
+  font-weight: bold;
+  font-size: 12px;
+}

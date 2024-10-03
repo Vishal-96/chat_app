@@ -1,0 +1,46 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "description": "simple mern app backend",
+  "main": "index.js",
+  "engines": {
+    "node": "16.20.1"
+  },
+  "scripts": {
+    "start-prod": "npm run build-server && npm run start-server",
+    "stop-all":"pm2 stop all",
+    "build-server": "babel -d ./build ./src -s",
+    "start-server": "pm2 stop all && pm2 start ./build/index.js --name server",
+    "server": "nodemon --exec babel-node src/index.js",
+    "client": "npm start --prefix ../client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Vishal (https://github.com/Vishal-96)",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.1.0",
+    "config": "^3.3.0",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^6.1.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.5",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pm2": "^5.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

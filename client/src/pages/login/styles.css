@@ -1,0 +1,32 @@
+.login {
+  display: flex;
+  justify-content: center;
+  background: #a19ae6;
+  align-items: center;
+}
+
+.login .container {
+  max-width: 400px;
+  background: #ffffff;
+  padding: 40px;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.login .login-text {
+  display: inline-block;
+  min-width: 250px;
+}
+
+.login .logins {
+  margin: 5px 0;
+}
+
+.login .error {
+  display: flex;
+  color: rgb(241, 85, 85);
+  font-weight: bold;
+  font-size: 14px;
+  justify-content: center;
+  padding: 5px;
+}
