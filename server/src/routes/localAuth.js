@@ -14,8 +14,6 @@ router.post('/login', requireLocalAuth, (req, res) => {
 });
 
 router.post('/register', async (req, res, next) => {
-  console.log("her in register");
-
   const { error } = Joi.validate(req.body, registerSchema);
   if (error) {
     return res.status(422).send({ message: error.details[0].message });
